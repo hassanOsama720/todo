@@ -1,0 +1,27 @@
+.edit {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 60%;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    margin-top: 200px;
+}
+.edit .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

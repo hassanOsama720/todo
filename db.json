@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "content": "Buy milk",
+      "date": "2019-01-01",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "content": "Buy eggs",
+      "date": "2019-01-01"
+    },
+    {
+      "id": 3,
+      "content": "Buy bread",
+      "date": "2019-01-01"
+    },
+    {
+      "content": "welcome",
+      "date": "2023-05-22T13:42:02.421Z",
+      "id": 4
+    }
+  ]
+}
