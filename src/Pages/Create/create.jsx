@@ -19,7 +19,7 @@ const Create = () => {
             content: content,
             date: new Date()
         }
-        axios.post("http://localhost:3000/items", data)
+        axios.post("https://json-server-react-mauve.vercel.app/items", data)
             .then((res) => {
                 navigate("/");
             })

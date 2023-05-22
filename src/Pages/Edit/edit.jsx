@@ -11,7 +11,7 @@ const Edit = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/items/${id}`)
+        axios.get(`https://json-server-react-mauve.vercel.app/items/${id}`)
             .then((res) => {
                 setContent(res.data.content);
                 setDate(res.data.date);
@@ -27,7 +27,7 @@ const Edit = () => {
             alert("Content length must be between 5 and 100 characters");
             return;
         }
-        axios.put(`http://localhost:3000/items/${id}`, { content, date })
+        axios.put(`https://json-server-react-mauve.vercel.app/items/${id}`, { content, date })
             .then((res) => {
                 navigate("/");
             })

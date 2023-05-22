@@ -12,7 +12,7 @@ const Card = ({ content , date , id , deleteItem }) => {
 
     const handleDelete = (id) => {
         setDeleting(true);
-        axios.delete(`http://localhost:3000/items/${id}`)
+        axios.delete(`https://json-server-react-mauve.vercel.app/items/${id}`)
             .then((res) => {
                 setDeleting(false);
                 deleteItem((prev) => !prev);

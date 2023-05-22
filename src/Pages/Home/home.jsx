@@ -10,7 +10,7 @@ const Home = () => {
     const [deleteItem, setDeleteItem] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/items")
+        axios.get("https://json-server-react-mauve.vercel.app/items")
             .then((res) => {
                 setItems(res.data);
             })

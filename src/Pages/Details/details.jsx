@@ -13,7 +13,7 @@ const Details = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/items/${id}`)
+        axios.get(`https://json-server-react-mauve.vercel.app/items/${id}`)
             .then((res) => {
                 setContent(res.data.content);
                 setDate(res.data.date);
