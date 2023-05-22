@@ -10,6 +10,11 @@ const Create = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // validate
+        if (content.length < 5 || content.length > 100) {
+            alert("Content length must be between 5 and 100 characters");
+            return;
+        }
         const data = {
             content: content,
             date: new Date()
