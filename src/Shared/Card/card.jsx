@@ -19,6 +19,10 @@ const Card = ({ content , date , id , deleteItem }) => {
             })
             .catch((err) => {
                 console.log(err);
+                if (err.response.data.includes("read-only file system, open 'db.json'")) {
+                    setDeleting(false);
+                    deleteItem((prev) => !prev);
+                }
             })
     }
 

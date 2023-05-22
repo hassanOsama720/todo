@@ -24,7 +24,10 @@ const Create = () => {
                 navigate("/");
             })
             .catch((err) => {
-                console.log(err.response);
+                console.log(err.response.data);
+                if (err.response.data.includes("read-only file system, open 'db.json'")) {
+                    navigate("/")
+                }
             })
     }
 
