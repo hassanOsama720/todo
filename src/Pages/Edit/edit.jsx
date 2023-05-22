@@ -41,11 +41,17 @@ const Edit = () => {
         navigate("/");
     }
 
+    const handleEnter = (e) => {
+        if (e.key === "Enter") {
+            handleSubmit(e);
+        }
+    }
+
     return (
         <div className="edit">
             {content ? (
                 <form onSubmit={handleSubmit}>
-                    <input type="text" className="form-control edit__input" id="content" value={content} onChange={(e) => { setContent(e.target.value) }} />
+                    <input type="text" className="form-control edit__input" id="content" value={content} onChange={(e) => { setContent(e.target.value) }} onKeyDown={handleEnter} />
                     <div className="d-flex justify-content-around w-50">
                         <button type="submit" className="btn btn-primary">Update</button>
                         <button className="btn btn-lg btn-outline-success" onClick={handleBack}>Back</button>

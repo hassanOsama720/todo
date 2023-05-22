@@ -32,10 +32,16 @@ const Create = () => {
         navigate("/");
     }
 
+    const handleEnter = (e) => {
+        if (e.key === "Enter") {
+            handleSubmit(e);
+        }
+    }
+
     return (
         <div className="create">
             <form onSubmit={handleSubmit}>
-                <textarea className="create__input" placeholder="What's on your mind?" onChange={(e) => setContent(e.target.value)} />
+                <textarea className="create__input" placeholder="What's on your mind?" onChange={(e) => setContent(e.target.value)} onKeyDown={handleEnter} />
                 <div className="d-flex justify-content-around w-50">
                     <button className="btn btn-lg btn-outline-primary" type="submit">Create</button>
                     <button className="btn btn-lg btn-outline-success" onClick={handleBack}>Back</button>
