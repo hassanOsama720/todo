@@ -24,7 +24,7 @@ const Create = () => {
                 navigate("/");
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err.response);
             })
     }
 
