@@ -3,11 +3,12 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {Dna} from "react-loader-spinner";
 
 
 
 const Details = () => {
-    const [content, setContent] = useState("");
+    const [content, setContent] = useState(null);
     const [date, setDate] = useState("");
     const { id } = useParams();
     const navigate = useNavigate();
@@ -29,10 +30,22 @@ const Details = () => {
 
     return (
         <div className="details container">
-            <div className="details__content">
-                <h1>{content}</h1>
-                <p>{date}</p>
-            </div>
+            {content ? (
+                <div className="details__content">
+                    <h1>{content}</h1>
+                    <p>{date}</p>
+                </div>
+            ):(
+                <Dna
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="dna-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="dna-wrapper"
+                />
+            )}
+
             <div className="d-flex justify-content-around w-50">
                 <button className="btn btn-lg btn-outline-success" onClick={handleBack}>Back</button>
             </div>
